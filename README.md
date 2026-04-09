@@ -54,14 +54,6 @@ If this guide helped you make a better decision or saved you research time:
 **PayPal** — ronphierce@gmail.com
 **GCash** — 0956 651 0333
 
-## Work With Me
-
-Custom name audits, branding strategy, solar energy consulting, or real estate consultation:
-
-- **Facebook:** [@EvBroPh](https://www.facebook.com/evbroph)
-- **Email:** ronphierce@gmail.com
-- **Web:** [ronnelestrada.com](https://ronnelestrada.com)
-
 ## Disclaimer
 
 This guide is for educational and strategic insight purposes. Numerology is a metaphysical tradition — use it as a decision-support layer alongside practical business analysis, not as absolute certainty. Compound names marked ★ are verified against Cheiro. Numbers 34+ have thinner classical sourcing.
