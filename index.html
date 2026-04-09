@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numerology Business Guide — Ronnel Estrada (Corrected v2)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0907;--bg2:#111009;--bg3:#18160f;--bg4:#201d14;
+  --gold:#c9a84c;--gold-dim:#8a6f32;--gold-light:#e8c97a;
+  --cream:#f0e8d5;--cream-dim:#b8ad98;--cream-muted:#6e6557;
+  --text:#ede8dc;--text-dim:#9e9484;--text-muted:#5c5448;
+  --border:rgba(201,168,76,0.15);--border-dim:rgba(201,168,76,0.08);
+  --good:#4a9e6e;--good-bg:rgba(74,158,110,0.12);
+  --bad:#9e4a4a;--bad-bg:rgba(158,74,74,0.12);
+  --neutral:#7a7060;--neutral-bg:rgba(122,112,96,0.12);
+  --radius:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:2px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,7,0.94);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:52px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--gold);letter-spacing:0.05em;white-space:nowrap}
+.tool-switcher{display:flex;gap:2px;background:var(--bg4);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:3px}
+.tool-btn{padding:6px 14px;font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);cursor:pointer;border:none;background:transparent;border-radius:6px;transition:all .2s;white-space:nowrap}
+.tool-btn.active{background:rgba(201,168,76,0.12);color:var(--gold);border:0.5px solid var(--border)}
+.nav-sub{display:flex;gap:0;padding:0 2rem;height:36px;align-items:center;border-top:0.5px solid var(--border-dim);overflow-x:auto}
+.nav-sub::-webkit-scrollbar{height:0}
+.nav-link{padding:6px 14px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);cursor:pointer;border:none;background:transparent;transition:color .2s;text-decoration:none;white-space:nowrap}
+.nav-link:hover{color:var(--gold)}
+
+.tool-panel{display:none}
+.tool-panel.active{display:block}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,168,76,0.06) 0%,transparent 70%);pointer-events:none}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:.8}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1rem;letter-spacing:-0.02em}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:15px;color:var(--text-dim);max-width:500px;margin:0 auto 2.5rem;font-weight:300;line-height:1.8}
+.hero-divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 2.5rem}
+.hero-cards{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-card{border:0.5px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;font-size:13px;color:var(--text-dim);cursor:pointer;transition:all .25s;text-align:left;min-width:150px}
+.hero-card:hover{border-color:var(--gold-dim);background:rgba(201,168,76,0.05);color:var(--cream-dim)}
+.hero-card-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;margin-bottom:4px}
+.hero-card-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase}
+.scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+.scroll-arrow{width:14px;height:14px;border-right:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);transform:rotate(45deg)}
+
+section{padding:5rem 2rem;max-width:1000px;margin:0 auto}
+.section-divider{width:100%;height:0.5px;background:var(--border-dim)}
+.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;color:var(--cream);margin-bottom:.5rem;line-height:1.15}
+.section-subtitle{font-size:14px;color:var(--text-dim);margin-bottom:2.5rem;max-width:600px;line-height:1.8}
+
+.card{background:var(--bg3);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.5rem}
+.card-gold{border-color:var(--border)}
+.card+.card{margin-top:1rem}
+
+.pyth-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:4px}
+.pyth-col-header{text-align:center;font-family:'DM Mono',monospace;font-size:13px;color:var(--gold);padding:6px 0;font-weight:500}
+.pyth-cell{background:var(--bg4);border:0.5px solid var(--border-dim);border-radius:5px;padding:8px 4px;text-align:center;transition:all .2s}
+.pyth-cell:hover{border-color:var(--gold-dim);background:rgba(201,168,76,0.06)}
+.pyth-cell .letter{font-size:14px;font-weight:500;color:var(--cream)}
+.pyth-cell .val{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold-dim);margin-top:2px}
+.chald-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+.chald-col{background:var(--bg4);border:0.5px solid var(--border-dim);border-radius:5px;padding:10px 6px;text-align:center}
+.chald-col .chald-num{font-family:'DM Mono',monospace;font-size:15px;color:var(--gold);font-weight:500;margin-bottom:8px;padding-bottom:8px;border-bottom:0.5px solid var(--border-dim)}
+.chald-col .chald-letters{font-size:12px;color:var(--cream-dim);line-height:1.8}
+
+.steps{display:flex;flex-direction:column;gap:1rem}
+.step{display:flex;gap:1rem;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;border:0.5px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);flex-shrink:0;margin-top:2px}
+.step-content{font-size:14px;color:var(--text-dim);line-height:1.75}
+.step-content strong{color:var(--cream);font-weight:500}
+
+.table-wrap{overflow-x:auto;border-radius:var(--radius);border:0.5px solid var(--border-dim)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{background:var(--bg4);padding:12px 16px;text-align:left;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);font-weight:400;border-bottom:0.5px solid var(--border)}
+tbody td{padding:12px 16px;border-bottom:0.5px solid var(--border-dim);color:var(--text-dim);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:rgba(201,168,76,0.02)}
+.num-col{font-family:'DM Mono',monospace;font-size:18px;color:var(--gold);font-weight:300}
+td strong{color:var(--cream);font-weight:500}
+
+.tier-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-bottom:4px}
+.tier-good{background:var(--good-bg);color:#6dc494;border:0.5px solid rgba(74,158,110,0.25)}
+.tier-bad{background:var(--bad-bg);color:#c47a7a;border:0.5px solid rgba(158,74,74,0.25)}
+.tier-neutral{background:var(--neutral-bg);color:#a09888;border:0.5px solid rgba(122,112,96,0.25)}
+
+.calc-wrap{background:var(--bg2);border:0.5px solid var(--border);border-radius:12px;padding:2rem;position:relative;overflow:hidden}
+.calc-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.calc-input-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:8px;display:block}
+.calc-input{width:100%;background:var(--bg4);border:0.5px solid var(--border);border-radius:var(--radius);padding:14px 18px;font-family:'Outfit',sans-serif;font-size:18px;font-weight:300;color:var(--cream);letter-spacing:0.05em;outline:none;transition:border-color .2s}
+.calc-input::placeholder{color:var(--text-muted)}
+.calc-input:focus{border-color:var(--gold-dim)}
+.sys-tabs{display:flex;gap:6px;margin-bottom:2rem;flex-wrap:wrap}
+.sys-tab{padding:8px 18px;border:0.5px solid var(--border-dim);border-radius:var(--radius);font-size:12px;cursor:pointer;background:transparent;color:var(--text-dim);transition:all .2s}
+.sys-tab:hover{border-color:var(--gold-dim);color:var(--cream-dim)}
+.sys-tab.active{background:rgba(201,168,76,0.1);border-color:var(--gold-dim);color:var(--gold)}
+.empty-state{text-align:center;padding:3rem;color:var(--text-muted);font-size:14px}
+.empty-glyph{font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--bg4);margin-bottom:1rem}
+
+.priority-hero{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.priority-card{border-radius:var(--radius);padding:1.75rem;border:0.5px solid var(--border-dim);position:relative;overflow:hidden}
+.priority-card.winner{border-color:var(--gold-dim);background:rgba(201,168,76,0.05)}
+.priority-card.winner::before{content:'PREFERRED FOR NAMING';position:absolute;top:12px;right:12px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.15em;color:var(--gold);background:rgba(201,168,76,0.15);padding:3px 8px;border-radius:3px}
+.priority-card-name{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--cream);margin-bottom:.25rem}
+.priority-card-sub{font-size:12px;color:var(--text-muted);margin-bottom:1rem}
+.priority-reason{font-size:13px;color:var(--text-dim);line-height:1.75}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:0.5px solid var(--border-dim);border-radius:var(--radius);overflow:hidden}
+.compare-cell{padding:14px 16px;border-bottom:0.5px solid var(--border-dim);border-right:0.5px solid var(--border-dim);font-size:13px;color:var(--text-dim);line-height:1.6}
+.compare-cell:nth-child(3n){border-right:none}
+.compare-cell.header{background:var(--bg4);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim)}
+.compare-cell.feature{color:var(--cream-dim)}
+.compare-cell.last-row{border-bottom:none}
+
+.workflow-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.workflow-step{background:var(--bg3);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.25rem}
+.workflow-step-num{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold-dim);font-weight:300;line-height:1;margin-bottom:.5rem;opacity:.5}
+.workflow-step-title{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:6px}
+.workflow-step-body{font-size:12px;color:var(--text-dim);line-height:1.7}
+
+.fav-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fav-card{background:var(--bg3);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.25rem}
+.fav-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem}
+.fav-nums{display:flex;flex-wrap:wrap;gap:6px}
+.fav-num{font-family:'DM Mono',monospace;font-size:13px;padding:5px 10px;border-radius:5px}
+.fav-num.good{background:var(--good-bg);color:#6dc494;border:0.5px solid rgba(74,158,110,0.2)}
+.fav-num.ok{background:var(--neutral-bg);color:#a09888;border:0.5px solid rgba(122,112,96,0.15)}
+.fav-num.bad{background:var(--bad-bg);color:#c47a7a;border:0.5px solid rgba(158,74,74,0.2)}
+.note-box{background:rgba(201,168,76,0.04);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;font-size:13px;color:var(--text-dim);line-height:1.75;margin-top:1.5rem}
+.note-box strong{color:var(--cream-dim)}
+.warn-box{background:rgba(158,74,74,0.06);border:0.5px solid rgba(158,74,74,0.25);border-radius:var(--radius);padding:1.25rem;font-size:13px;color:var(--text-dim);line-height:1.75;margin-top:1.5rem}
+.warn-box strong{color:#c47a7a}
+
+/* TIMING TOOL */
+.timing-hero{padding:8rem 2rem 3rem;text-align:center;position:relative;overflow:hidden}
+.timing-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 40%,rgba(201,168,76,0.05) 0%,transparent 70%);pointer-events:none}
+.timing-sections{max-width:1000px;margin:0 auto;padding:0 2rem 6rem}
+.timing-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:12px;padding:2rem;position:relative;overflow:hidden;margin-bottom:2rem}
+.timing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.timing-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.5rem}
+.timing-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--cream);margin-bottom:.5rem}
+.timing-desc{font-size:13px;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.75}
+.date-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
+.input-group{display:flex;flex-direction:column;gap:6px}
+.input-group label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dim)}
+.num-select{width:100%;background:var(--bg4);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 14px;font-family:'DM Mono',monospace;font-size:14px;color:var(--cream);outline:none;cursor:pointer;transition:border-color .2s;appearance:none;-webkit-appearance:none}
+.num-select:focus{border-color:var(--gold-dim)}
+.result-area{background:var(--bg4);border-radius:var(--radius);padding:1.5rem;margin-top:1rem;display:none}
+.result-area.visible{display:block}
+.big-number{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;line-height:1;margin-bottom:.25rem}
+.big-number.good{color:var(--good)}
+.big-number.bad{color:var(--bad)}
+.big-number.neutral{color:var(--gold)}
+.breakdown-mono{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:8px;line-height:1.8;word-break:break-all}
+.date-num-ref{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-top:1rem}
+.ref-cell{background:var(--bg4);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:10px;text-align:center}
+.ref-cell-num{font-family:'DM Mono',monospace;font-size:18px;margin-bottom:4px}
+.ref-cell-name{font-size:11px;color:var(--cream-dim);line-height:1.4}
+.ref-cell-verdict{font-size:10px;margin-top:2px}
+.align-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.align-block{background:var(--bg3);border-radius:var(--radius);padding:1.25rem;text-align:center}
+.align-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:6px}
+.align-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;line-height:1;color:var(--gold)}
+.align-compat-bar{height:4px;border-radius:2px;background:var(--bg3);margin:1rem 0;overflow:hidden}
+.align-compat-fill{height:100%;border-radius:2px;transition:width .6s ease}
+.align-verdict{margin-top:1rem;padding:1.25rem;border-radius:var(--radius);font-size:13px;line-height:1.75}
+
+footer{border-top:0.5px solid var(--border-dim);padding:3rem 2rem;text-align:center;color:var(--text-muted);font-size:12px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold-dim);margin-bottom:.5rem}
+
+@media(max-width:680px){
+  .nav-top{padding:0 1rem}.nav-sub{padding:0 1rem}
+  .tool-btn{padding:5px 10px;font-size:10px}
+  .priority-hero,.fav-grid,.align-grid{grid-template-columns:1fr}
+  .support-grid{grid-template-columns:1fr !important}
+  .compare-grid{grid-template-columns:1fr}
+  .compare-cell:nth-child(3n){border-right:0.5px solid var(--border-dim)}
+  .workflow-steps{grid-template-columns:1fr 1fr}
+  section{padding:3.5rem 1.25rem}
+  .timing-sections{padding:0 1.25rem 4rem}
+  .timing-card{padding:1.5rem}
+  .date-row{grid-template-columns:1fr 1fr}
+}
+@media(max-width:420px){.workflow-steps,.date-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="nav-logo">Numerology Guide <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold-dim);letter-spacing:.1em;vertical-align:super">v2</span></div>
+    <div class="tool-switcher">
+      <button class="tool-btn active" onclick="switchTool('naming',this)">Naming Guide</button>
+      <button class="tool-btn" onclick="switchTool('timing',this)">Business Timing</button>
+    </div>
+  </div>
+  <div class="nav-sub" id="nav-naming">
+    <a class="nav-link" href="#pythagorean">Pythagorean</a>
+    <a class="nav-link" href="#chaldean">Chaldean</a>
+    <a class="nav-link" href="#priority">Which to Use</a>
+    <a class="nav-link" href="#calculator">Calculator</a>
+    <a class="nav-link" href="#comparison">Comparison</a>
+    <a class="nav-link" href="#workflow">Workflow</a>
+  </div>
+  <div class="nav-sub" id="nav-timing" style="display:none">
+    <a class="nav-link" href="#lifepath">Life Path</a>
+    <a class="nav-link" href="#personalyear">Personal Year</a>
+    <a class="nav-link" href="#launchdate">Launch Date</a>
+    <a class="nav-link" href="#alignment">Name Alignment</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════ -->
+<!--       NAMING GUIDE TOOL       -->
+<!-- ══════════════════════════════ -->
+<div class="tool-panel active" id="tool-naming">
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow">Complete Reference Guide — Corrected Edition</div>
+  <h1 class="hero-title">Business Naming<br><em>by the Numbers</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">A corrected guide to Pythagorean and Chaldean numerology for naming your business, brand, and social media pages. Compound names verified against Cheiro's original texts.</p>
+  <div class="hero-cards">
+    <div class="hero-card" onclick="scrollTo('pythagorean')"><div class="hero-card-num">1→9</div><div class="hero-card-label">Pythagorean</div></div>
+    <div class="hero-card" onclick="scrollTo('chaldean')"><div class="hero-card-num">1→8</div><div class="hero-card-label">Chaldean</div></div>
+    <div class="hero-card" onclick="scrollTo('calculator')"><div class="hero-card-num">⌗</div><div class="hero-card-label">Calculator</div></div>
+  </div>
+  <div class="scroll-ind"><div class="scroll-arrow"></div></div>
+</div>
+
+<div class="section-divider"></div>
+
+<section id="pythagorean">
+  <div class="section-label">System One</div>
+  <h2 class="section-title">Pythagorean Numerology</h2>
+  <p class="section-subtitle">The most widely used Western system. Letters assigned values 1–9 in strict alphabetical order. Both the compound (double-digit) and root (single-digit) numbers carry meaning.</p>
+  <div class="card card-gold" style="margin-bottom:2rem">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem">Letter Value Chart — Alphabetical Order</div>
+    <div class="pyth-grid" style="margin-bottom:6px">
+      <div class="pyth-col-header">1</div><div class="pyth-col-header">2</div><div class="pyth-col-header">3</div><div class="pyth-col-header">4</div><div class="pyth-col-header">5</div><div class="pyth-col-header">6</div><div class="pyth-col-header">7</div><div class="pyth-col-header">8</div><div class="pyth-col-header">9</div>
+    </div>
+    <div class="pyth-grid" id="pyth-chart"></div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:.75rem">Letters cycle A–Z mapped 1–9 sequentially. Pattern restarts at J=1, S=1.</p>
+  </div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:1.25rem;font-weight:400">How to Calculate</h3>
+  <div class="card" style="margin-bottom:2rem">
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content">Write your business name. Remove spaces and punctuation — keep only letters.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content">Assign each letter its value (A=1, B=2, C=3… cycling back at J=1).</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content">Sum all values. Total = <strong>Compound Number</strong>.</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content">Add the two digits until one digit remains. That's your <strong>Root Number</strong>.</div></div>
+      <div class="step"><div class="step-num">!</div><div class="step-content"><strong>Master Numbers 11, 22, 33</strong> — not reduced further. Amplified roots 2, 4, and 6.</div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:2rem;background:rgba(201,168,76,0.04);border-color:var(--border)">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.75rem">Worked Example — "NOVA"</div>
+    <div style="font-family:'DM Mono',monospace;font-size:14px;color:var(--text-dim);line-height:2">N<span style="color:var(--gold)">(5)</span> + O<span style="color:var(--gold)">(6)</span> + V<span style="color:var(--gold)">(4)</span> + A<span style="color:var(--gold)">(1)</span> = <span style="color:var(--cream);font-size:18px">16</span> → 1+6 = <span style="color:var(--cream);font-size:18px">7</span></div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Compound: 16 · Root: 7</div>
+  </div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:1.25rem;font-weight:400">Root Number Meanings for Business</h3>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:1rem;line-height:1.6">Note: Business applications below are modern interpretations — Pythagorean numerology was not originally designed for commercial naming. These are reasonable extrapolations, not classical doctrine.</p>
+  <div class="table-wrap"><table><thead><tr><th>No.</th><th>Keywords</th><th>Best for</th><th>Caution</th></tr></thead><tbody id="pyth-meanings"></tbody></table></div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="chaldean">
+  <div class="section-label">System Two</div>
+  <h2 class="section-title">Chaldean Numerology</h2>
+  <p class="section-subtitle">Rooted in ancient Babylon, popularized by Cheiro. Letters assigned 1–8 by phonetic vibration — not alphabetical order. 9 is sacred and unassigned. The Compound Number is the primary layer.</p>
+  <div class="card card-gold" style="margin-bottom:2rem">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem">Letter Value Chart — Phonetic Vibration (Non-Sequential)</div>
+    <div class="chald-grid" id="chald-chart"></div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:.75rem">Notice: F=8, G=3, H=5, O=7 — completely different from Pythagorean. The same name produces different numbers in each system.</p>
+  </div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:1.25rem;font-weight:400">How to Calculate</h3>
+  <div class="card" style="margin-bottom:2rem">
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content">Write your business name as it will appear publicly (as spoken).</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content">Assign each letter its <strong>Chaldean</strong> value from the chart above.</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content">Sum all values. This is your <strong>Compound Number</strong> — interpret this first.</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content">Reduce to single digit for the <strong>Root Number</strong> (secondary). Chaldean does not formally use Master Numbers.</div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:2rem;background:rgba(201,168,76,0.04);border-color:var(--border)">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.75rem">Worked Example — "NOVA"</div>
+    <div style="font-family:'DM Mono',monospace;font-size:14px;color:var(--text-dim);line-height:2">N<span style="color:var(--gold)">(5)</span> + O<span style="color:var(--gold)">(7)</span> + V<span style="color:var(--gold)">(6)</span> + A<span style="color:var(--gold)">(1)</span> = <span style="color:var(--cream);font-size:18px">19</span> → 1+9 = <span style="color:var(--cream);font-size:18px">10</span> → 1+0 = <span style="color:var(--cream);font-size:18px">1</span></div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Compound: 19 · Root: 1 · Compare to Pythagorean: compound 16, root 7</div>
+  </div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:1.25rem;font-weight:400">Compound Number Meanings — Primary Layer</h3>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:1rem;line-height:1.6">Names marked with ★ are Cheiro's original labels. Others are modern interpretive labels. Numbers 34+ have thinner classical sourcing — treat with appropriate caution. Business applications for all numbers are modern extrapolations.</p>
+  <div class="table-wrap" style="margin-bottom:2rem"><table><thead><tr><th>No.</th><th>Archetype</th><th>Meaning & Business Guidance</th></tr></thead><tbody id="chald-compound-table"></tbody></table></div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:1.25rem;font-weight:400">Root Number Meanings — Secondary Layer</h3>
+  <div class="table-wrap"><table><thead><tr><th>No.</th><th>Planet</th><th>Keywords</th><th>Business Essence</th></tr></thead><tbody id="chald-root-table"></tbody></table></div>
+  <div class="note-box"><strong>Key Chaldean insight:</strong> Number 8 is ruled by Saturn and carries karmic weight. Some practitioners avoid it as a root for new businesses. Always interpret the Compound Number before the root.</div>
+  <div class="warn-box" style="margin-top:1rem"><strong>Planetary note (v2 correction):</strong> Classical Chaldean assigns 4 to Rahu (North Node) and 7 to Ketu (South Node) — shadow planets from Vedic tradition. The modern Western substitution of Uranus (4) and Neptune (7) is common but anachronistic — these planets were unknown to the Chaldeans. This guide now shows both.</div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="priority">
+  <div class="section-label">Which System to Use</div>
+  <h2 class="section-title">Chaldean for Naming.<br><em>One School's Position.</em></h2>
+  <p class="section-subtitle">Many practitioners use this split — but it is not universal consensus. Indian numerology schools often use Chaldean for everything. Some Western practitioners use only Pythagorean. This guide follows the split approach because the reasoning for naming is sound.</p>
+  <div class="priority-hero">
+    <div class="priority-card winner">
+      <div class="priority-card-name">Chaldean</div>
+      <div class="priority-card-sub">For business names, brand names, social media pages</div>
+      <div class="priority-reason">Assigns values based on phonetic vibration — how the name actually sounds. Since a brand is heard, said, and remembered aurally, Chaldean is consistent with the purpose of naming. Preferred by serious numerologists; traced to Cheiro.<br><br><strong style="color:var(--cream-dim)">Primary filter:</strong> Compound Number.<br><strong style="color:var(--cream-dim)">Secondary check:</strong> Root Number.</div>
+    </div>
+    <div class="priority-card">
+      <div class="priority-card-name">Pythagorean</div>
+      <div class="priority-card-sub">For personal life path, personality, birth date readings</div>
+      <div class="priority-reason">Assigns values by alphabetical order — mechanical, not sound-based. Works well for analyzing a person's name and birth date. Less precise for commercial naming because it ignores phonetic resonance.<br><br><strong style="color:var(--cream-dim)">Best for:</strong> personal numerology, life path, personal year cycles.</div>
+    </div>
+  </div>
+  <div class="card card-gold">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem">Best Practice: Run Both, Decide by Chaldean</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">→</div><div class="step-content">Run your candidate name through both systems using the calculator below.</div></div>
+      <div class="step"><div class="step-num">→</div><div class="step-content">Check the <strong>Chaldean Compound Number</strong> first — if it's favorable, the name has strong foundation.</div></div>
+      <div class="step"><div class="step-num">→</div><div class="step-content">If both systems yield favorable results, that's a <strong>green light</strong>.</div></div>
+      <div class="step"><div class="step-num">→</div><div class="step-content">If they conflict, <strong>prioritize Chaldean</strong> for naming decisions.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="calculator">
+  <div class="section-label">Interactive Tool</div>
+  <h2 class="section-title">Name Calculator</h2>
+  <p class="section-subtitle">Enter any business name, brand, or social media handle. Spaces and punctuation are ignored — only letters count.</p>
+  <div class="calc-wrap">
+    <label class="calc-input-label">Enter name</label>
+    <input class="calc-input" id="calcInput" type="text" placeholder="e.g. Apex Digital Studio" oninput="calculate()" style="margin-bottom:1.5rem">
+    <div class="sys-tabs">
+      <button class="sys-tab active" onclick="switchTab('both',this)">Both systems</button>
+      <button class="sys-tab" onclick="switchTab('pythagorean',this)">Pythagorean only</button>
+      <button class="sys-tab" onclick="switchTab('chaldean',this)">Chaldean only</button>
+    </div>
+    <div id="calc-output"><div class="empty-state"><div class="empty-glyph">∞</div>Type a name above to begin your reading.</div></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="reference">
+  <div class="section-label">Quick Reference</div>
+  <h2 class="section-title">Number Tendencies at a Glance</h2>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.6">These are simplified groupings for quick reference. Every number carries nuance that a simple "good/bad" label cannot capture. Always read the full compound meaning above before making decisions. Numbers marked "Caution" are not universally bad — they carry specific warnings that may or may not apply to your context.</p>
+  <div class="fav-grid" style="margin-bottom:2rem">
+    <div class="fav-card">
+      <div class="fav-title">Pythagorean — Root Numbers</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Generally strong for business</div>
+      <div class="fav-nums" style="margin-bottom:12px"><span class="fav-num good">1</span><span class="fav-num good">3</span><span class="fav-num good">5</span><span class="fav-num good">8</span><span class="fav-num good">9</span><span class="fav-num good">11</span><span class="fav-num good">22</span><span class="fav-num good">33</span></div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Context-dependent</div>
+      <div class="fav-nums" style="margin-bottom:12px"><span class="fav-num ok">2</span><span class="fav-num ok">4</span><span class="fav-num ok">6</span><span class="fav-num ok">7</span></div>
+    </div>
+    <div class="fav-card">
+      <div class="fav-title">Chaldean — Compound Numbers</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Generally favorable (per Cheiro)</div>
+      <div class="fav-nums" style="margin-bottom:12px"><span class="fav-num good">15</span><span class="fav-num good">19</span><span class="fav-num good">21</span><span class="fav-num good">23</span><span class="fav-num good">24</span><span class="fav-num good">27</span><span class="fav-num good">32</span><span class="fav-num good">36</span><span class="fav-num good">37</span><span class="fav-num good">41</span><span class="fav-num good">45</span><span class="fav-num good">46</span></div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Mixed / needs context</div>
+      <div class="fav-nums" style="margin-bottom:12px"><span class="fav-num ok">10</span><span class="fav-num ok">13</span><span class="fav-num ok">14</span><span class="fav-num ok">17</span><span class="fav-num ok">20</span><span class="fav-num ok">25</span><span class="fav-num ok">30</span><span class="fav-num ok">31</span><span class="fav-num ok">33</span><span class="fav-num ok">42</span></div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Carry specific warnings</div>
+      <div class="fav-nums"><span class="fav-num bad">11</span><span class="fav-num bad">12</span><span class="fav-num bad">16</span><span class="fav-num bad">18</span><span class="fav-num bad">22</span><span class="fav-num bad">26</span><span class="fav-num bad">28</span><span class="fav-num bad">29</span><span class="fav-num bad">34</span><span class="fav-num bad">38</span><span class="fav-num bad">40</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="comparison">
+  <div class="section-label">Side by Side</div>
+  <h2 class="section-title">System Comparison</h2>
+  <div class="compare-grid">
+    <div class="compare-cell header">Feature</div><div class="compare-cell header">Pythagorean</div><div class="compare-cell header">Chaldean</div>
+    <div class="compare-cell feature">Origin</div><div class="compare-cell">Ancient Greece, ~6th c. BCE</div><div class="compare-cell">Ancient Babylon; popularized by Cheiro (1800s)</div>
+    <div class="compare-cell feature">Letter scale</div><div class="compare-cell">1 to 9</div><div class="compare-cell">1 to 8 (9 is sacred, unassigned)</div>
+    <div class="compare-cell feature">Assignment basis</div><div class="compare-cell">Alphabetical order (A=1, B=2…)</div><div class="compare-cell">Phonetic sound vibration (non-sequential)</div>
+    <div class="compare-cell feature">Primary focus</div><div class="compare-cell">Root (single-digit) number</div><div class="compare-cell">Compound (double-digit) number</div>
+    <div class="compare-cell feature">Master Numbers</div><div class="compare-cell">Yes — 11, 22, 33 not reduced</div><div class="compare-cell">Not formally used</div>
+    <div class="compare-cell feature">Best use case</div><div class="compare-cell">Life path, personality, personal year</div><div class="compare-cell">Naming — business, brand, social media</div>
+    <div class="compare-cell feature last-row">Key authority</div><div class="compare-cell last-row">Pythagoras</div><div class="compare-cell last-row">Cheiro / Sepharial</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="workflow">
+  <div class="section-label">Step-by-Step Process</div>
+  <h2 class="section-title">Your Naming Workflow</h2>
+  <p class="section-subtitle">Follow this process when naming a business, brand, or page using numerology.</p>
+  <div class="workflow-steps" style="margin-bottom:2rem">
+    <div class="workflow-step"><div class="workflow-step-num">01</div><div class="workflow-step-title">Generate candidates</div><div class="workflow-step-body">Brainstorm 5–10 name ideas without worrying about numerology yet.</div></div>
+    <div class="workflow-step"><div class="workflow-step-num">02</div><div class="workflow-step-title">Run the calculator</div><div class="workflow-step-body">Enter each candidate. Record Chaldean Compound, Chaldean Root, and Pythagorean Root.</div></div>
+    <div class="workflow-step"><div class="workflow-step-num">03</div><div class="workflow-step-title">Read the full compound meaning</div><div class="workflow-step-body">Don't rely on the color badge alone. Read the archetype description and warnings. Context matters more than a label.</div></div>
+    <div class="workflow-step"><div class="workflow-step-num">04</div><div class="workflow-step-title">Cross-check Pythagorean</div><div class="workflow-step-body">Both favorable = strongest option.</div></div>
+    <div class="workflow-step"><div class="workflow-step-num">05</div><div class="workflow-step-title">Adjust spelling</div><div class="workflow-step-body">Try small spelling variations to shift the compound into a favorable range.</div></div>
+    <div class="workflow-step"><div class="workflow-step-num">06</div><div class="workflow-step-title">Verify externally</div><div class="workflow-step-body">Check trademark availability, domain, and social media handles.</div></div>
+  </div>
+  <div class="note-box"><strong>Honest reminder:</strong> Numerology is a metaphysical tradition — not a scientifically validated predictor of outcomes. Use it as an intentional layer alongside practical considerations: memorability, pronunciation, trademark availability, and market fit.</div>
+</section>
+
+</div><!-- end tool-naming -->
+
+<!-- ══════════════════════════════ -->
+<!--      BUSINESS TIMING TOOL     -->
+<!-- ══════════════════════════════ -->
+<div class="tool-panel" id="tool-timing">
+
+<div class="timing-hero">
+  <div class="timing-hero-bg"></div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:.8">Business Timing Calculator</div>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1rem;letter-spacing:-.02em">Launch at the<br><em style="color:var(--gold)">Right Moment</em></h1>
+  <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 1.5rem"></div>
+  <p style="font-size:15px;color:var(--text-dim);max-width:480px;margin:0 auto;line-height:1.8;font-weight:300">Your name is set. Now time your launch. Calculate your life path, personal year energy, and the numerological value of any date.</p>
+</div>
+
+<div class="timing-sections">
+
+  <div class="timing-card" id="lifepath">
+    <div class="timing-label">Calculator One</div>
+    <div class="timing-title">Life Path Number</div>
+    <div class="timing-desc">Your core numerological identity, derived from your full birth date. Uses the component reduction method: day, month, and year are reduced separately before summing — this is the standard professional method that properly detects Master Numbers at each stage.</div>
+    <div class="date-row">
+      <div class="input-group"><label>Day</label><select class="num-select" id="lp-day" onchange="calcLifePath()"><option value="">DD</option></select></div>
+      <div class="input-group"><label>Month</label><select class="num-select" id="lp-month" onchange="calcLifePath()">
+        <option value="">MM</option><option value="1">January (1)</option><option value="2">February (2)</option><option value="3">March (3)</option><option value="4">April (4)</option><option value="5">May (5)</option><option value="6">June (6)</option><option value="7">July (7)</option><option value="8">August (8)</option><option value="9">September (9)</option><option value="10">October (10)</option><option value="11">November (11)</option><option value="12">December (12)</option>
+      </select></div>
+      <div class="input-group"><label>Year</label><select class="num-select" id="lp-year" onchange="calcLifePath()"><option value="">YYYY</option></select></div>
+    </div>
+    <div class="result-area" id="lp-result"></div>
+  </div>
+
+  <div class="timing-card" id="personalyear">
+    <div class="timing-label">Calculator Two</div>
+    <div class="timing-title">Personal Year Number</div>
+    <div class="timing-desc">Calculated from your birth day + birth month + current calendar year, using component reduction. Note: some practitioners run the Personal Year birthday-to-birthday rather than January-to-December. This calculator uses the calendar year method, which is the more common convention.</div>
+    <div class="date-row" style="grid-template-columns:1fr 1fr">
+      <div class="input-group"><label>Birth Day</label><select class="num-select" id="py-day" onchange="calcPersonalYear()"><option value="">DD</option></select></div>
+      <div class="input-group"><label>Birth Month</label><select class="num-select" id="py-month" onchange="calcPersonalYear()">
+        <option value="">MM</option><option value="1">January (1)</option><option value="2">February (2)</option><option value="3">March (3)</option><option value="4">April (4)</option><option value="5">May (5)</option><option value="6">June (6)</option><option value="7">July (7)</option><option value="8">August (8)</option><option value="9">September (9)</option><option value="10">October (10)</option><option value="11">November (11)</option><option value="12">December (12)</option>
+      </select></div>
+    </div>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:1rem;font-family:'DM Mono',monospace">Current year auto-set to <span style="color:var(--gold)" id="cy-display"></span></div>
+    <div class="result-area" id="py-result"></div>
+  </div>
+
+  <div class="timing-card" id="launchdate">
+    <div class="timing-label">Calculator Three</div>
+    <div class="timing-title">Launch Date Checker</div>
+    <div class="timing-desc">Enter any date you're considering for a launch, announcement, or founding. Get the date's numerological root and a verdict on whether its energy supports starting something new.</div>
+    <div class="date-row">
+      <div class="input-group"><label>Day</label><select class="num-select" id="ld-day" onchange="calcLaunch()"><option value="">DD</option></select></div>
+      <div class="input-group"><label>Month</label><select class="num-select" id="ld-month" onchange="calcLaunch()">
+        <option value="">MM</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
+      </select></div>
+      <div class="input-group"><label>Year</label><select class="num-select" id="ld-year" onchange="calcLaunch()"><option value="">YYYY</option></select></div>
+    </div>
+    <div class="result-area" id="ld-result"></div>
+    <div class="note-box" style="margin-top:1.5rem">
+      <strong style="display:block;margin-bottom:.75rem">Date number quick reference</strong>
+      <div class="date-num-ref" id="date-num-ref"></div>
+    </div>
+  </div>
+
+  <div class="timing-card" id="alignment">
+    <div class="timing-label">Calculator Four</div>
+    <div class="timing-title">Name + Date Alignment</div>
+    <div class="timing-desc">Enter your business name and a launch date. The calculator finds the Chaldean root of your name and the numerological root of the date, then checks if the two energies are compatible.</div>
+    <div class="warn-box" style="margin-bottom:1.5rem;margin-top:0"><strong>Transparency note (v2):</strong> This compatibility matrix is a <em>modern interpretive tool</em> — no classical source (Cheiro, Sepharial, or Vedic texts) provides a standardized number-to-number compatibility chart for name-date alignment. The pairings below are based on shared elemental affinity and planetary friendship concepts extrapolated from tradition, but they should be treated as suggestive, not authoritative.</div>
+    <div style="margin-bottom:1.25rem">
+      <label class="calc-input-label">Business name</label>
+      <input class="calc-input" id="align-name" type="text" placeholder="e.g. EvBro" oninput="calcAlignment()" style="font-size:16px">
+    </div>
+    <div class="date-row">
+      <div class="input-group"><label>Launch Day</label><select class="num-select" id="al-day" onchange="calcAlignment()"><option value="">DD</option></select></div>
+      <div class="input-group"><label>Launch Month</label><select class="num-select" id="al-month" onchange="calcAlignment()">
+        <option value="">MM</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
+      </select></div>
+      <div class="input-group"><label>Launch Year</label><select class="num-select" id="al-year" onchange="calcAlignment()"><option value="">YYYY</option></select></div>
+    </div>
+    <div class="result-area" id="al-result"></div>
+  </div>
+
+</div>
+</div><!-- end tool-timing -->
+
+<!-- ══════════════════════════════ -->
+<!--     SUPPORT / WORK WITH ME    -->
+<!-- ══════════════════════════════ -->
+<div class="section-divider"></div>
+
+<section style="max-width:720px;text-align:center">
+  <div class="section-label" style="text-align:center">Support This Project</div>
+  <h2 class="section-title" style="text-align:center;margin:0 auto .5rem">If this guide helped,<br><em style="color:var(--gold);font-style:italic">you can keep it growing.</em></h2>
+  <p style="font-size:14px;color:var(--text-dim);max-width:480px;margin:0 auto 2.5rem;line-height:1.8">This guide is free, ad-free, and built from primary sources. If it saved you time or helped you make a better naming decision, a small contribution supports continued research and corrections.</p>
+
+  <div class="support-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:520px;margin:0 auto 2rem">
+
+    <!-- PayPal Card -->
+    <div style="background:var(--bg3);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:border-color .2s" onmouseover="this.style.borderColor='var(--gold-dim)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.75rem">PayPal</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin-bottom:.25rem;font-weight:300">💳</div>
+      <a href="https://paypal.me/ronphierce" target="_blank" rel="noopener" style="display:inline-block;margin-top:.75rem;padding:10px 24px;border:0.5px solid var(--border);border-radius:var(--radius);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);text-decoration:none;transition:all .2s;background:rgba(201,168,76,0.06)" onmouseover="this.style.background='rgba(201,168,76,0.14)';this.style.borderColor='var(--gold-dim)'" onmouseout="this.style.background='rgba(201,168,76,0.06)';this.style.borderColor='var(--border)'">Send via PayPal</a>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);margin-top:.75rem">ronphierce@gmail.com</div>
+    </div>
+
+    <!-- GCash Card -->
+    <div style="background:var(--bg3);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:border-color .2s" onmouseover="this.style.borderColor='var(--gold-dim)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.75rem">GCash</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin-bottom:.25rem;font-weight:300">📱</div>
+      <div style="margin-top:.75rem;padding:10px 24px;border:0.5px solid var(--border-dim);border-radius:var(--radius);font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:var(--cream-dim)">0956 651 0333</div>
+      <div style="margin-top:.75rem;width:100px;height:100px;border-radius:6px;overflow:hidden;margin-left:auto;margin-right:auto">
+        <img src="gcash-qr.jpg" alt="GCash QR Code" style="width:100%;height:100%;object-fit:cover;border-radius:6px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<footer>
+  <div class="footer-logo">Numerology Guide <span style="font-size:12px;color:var(--text-muted)">v2 — Corrected</span></div>
+  <p>Pythagorean · Chaldean · Business Naming · Business Timing</p>
+
+  <div style="max-width:520px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:0.5px solid var(--border-dim)">
+    <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.5rem">Disclaimer</p>
+    <p style="font-size:11px;color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem">This guide is for educational and strategic insight purposes. Numerology is a metaphysical tradition — use it as a decision-support layer alongside practical business analysis, not as absolute certainty. Compound names verified against Cheiro's <em>Book of Numbers</em>. Numbers 34+ have thinner classical sourcing.</p>
+
+    <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.5rem">Feedback & Contributions</p>
+    <p style="font-size:11px;color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem">Suggestions, corrections, or improvements are welcome. If you find an error in a compound meaning or calculation, please reach out — accuracy matters more than completeness.</p>
+  </div>
+
+  <div style="margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid var(--border-dim)">
+    <p style="font-size:11px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Created by</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);font-weight:400;margin-bottom:4px">Ronnel Estrada</p>
+    <a href="https://ronnelestrada.com" target="_blank" style="font-family:'DM Mono',monospace;font-size:12px;color:var(--gold-dim);text-decoration:none;letter-spacing:.08em;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--gold-dim)'">ronnelestrada.com</a>
+    <p style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text-muted);margin-top:1rem;letter-spacing:.1em">MIT LICENSE · FREE TO USE AND SHARE</p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════
+   LETTER CHARTS — VERIFIED ✅
+   ═══════════════════════════════════════════════ */
+const PYTH={A:1,B:2,C:3,D:4,E:5,F:6,G:7,H:8,I:9,J:1,K:2,L:3,M:4,N:5,O:6,P:7,Q:8,R:9,S:1,T:2,U:3,V:4,W:5,X:6,Y:7,Z:8};
+const CHALD={A:1,B:2,C:3,D:4,E:5,F:8,G:3,H:5,I:1,J:1,K:2,L:3,M:4,N:5,O:7,P:8,Q:1,R:2,S:3,T:4,U:6,V:6,W:6,X:5,Y:1,Z:7};
+
+/* ═══════════════════════════════════════════════
+   PYTHAGOREAN ROOT MEANINGS — MODERN BUSINESS INTERPRETATION
+   ═══════════════════════════════════════════════ */
+const PYTH_DATA=[
+  [1,'Innovation · Leadership · Pioneering','Startups, tech, solo brands, first-movers','Ego friction in partnerships'],
+  [2,'Partnership · Diplomacy · Balance','Agencies, law firms, consulting, co-brands','Prone to indecision'],
+  [3,'Creativity · Expression · Growth','Marketing, entertainment, social media, design','Energy scatters without focus'],
+  [4,'Stability · Structure · Reliability','Construction, accounting, logistics, manufacturing','May appear rigid or slow-moving'],
+  [5,'Freedom · Communication · Commerce','Travel, media, retail, freelance platforms','Brand instability if pivoting too often'],
+  [6,'Nurture · Service · Community','Healthcare, food, wellness, family services','Risk of over-extending'],
+  [7,'Analysis · Research · Mastery','Tech research, consulting, academia, spirituality','Can feel too niche or inaccessible'],
+  [8,'Power · Abundance · Authority','Finance, real estate, executive services, luxury','May project money-obsession'],
+  [9,'Humanity · Global Reach · Completion','NGOs, education, global brands, philanthropy','Struggles with pure profit focus'],
+  [11,'Intuition · Inspiration (Master)','Coaching, spiritual brands, creative direction','High-pressure; needs clear vision'],
+  [22,'Master Builder · Legacy','Infrastructure, global movements, legacy brands','Demands exceptional leadership'],
+  [33,'Master Teacher · Compassionate Power','Education, healing, luxury advisory, consulting','Rare; demands deep purpose alignment']
+];
+
+/* ═══════════════════════════════════════════════
+   CHALDEAN COMPOUND MEANINGS — v2 CORRECTED
+   Names marked ★ = Cheiro's original label
+   Others = modern interpretive label (noted)
+   Tier: good/neutral/bad
+   ═══════════════════════════════════════════════ */
+const CHALD_COMPOUND=[
+  [10,'★ Wheel of Fortune','Flexible strategy needed; success after setbacks. Cheiro: symbolized by Isis and Osiris — the rise and fall of fortune.','neutral'],
+  [11,'★ Hidden Dangers','Warns of hidden opposition and treachery from others. Cheiro explicitly warns against this number. Avoid for brand names.','bad'],
+  [12,'★ The Sacrifice / The Victim','Self-undoing tendencies; suffering and anxiety of mind. Not recommended for business.','bad'],
+  [13,'★ Change & Upheaval','Destruction of the old to make way for the new. Powerful but volatile. Only appropriate for deliberate disruption brands.','neutral'],
+  [14,'★ Movement & Risk','Cheiro: danger from natural forces, financial risk. Commerce-adjacent but volatile — not the "high reward" number often marketed. Proceed with awareness.','neutral'],
+  [15,'★ The Magician','Powerful magnetism, eloquence, and public appeal. Very favorable. However, Cheiro warns these gifts can be used for destructive or selfish ends — the number amplifies intent, good or bad.','good'],
+  [16,'★ The Tower Struck by Lightning','Sudden, unexpected collapse. Strange fatality. Generally avoided for any brand name.','bad'],
+  [17,'★ The Star of the Magi','Peace, goodwill, spiritual perseverance. Favorable for heritage, spiritual, and purpose-driven brands. (Note: sometimes incorrectly listed as "The Immortal Star" — that is not Cheiro\'s label.)','good'],
+  [18,'★ Conflict & Materialism','Bitter quarrels, war, social upheaval. Cheiro treats this harshly. Not ideal for team-heavy businesses or partnerships.','bad'],
+  [19,'★ The Sun','One of the most fortunate compound numbers per Cheiro. Success, honor, and fulfillment. Excellent for virtually any business venture. (Note: sometimes incorrectly listed as "Prince of Heaven" — Cheiro\'s label is simply "The Sun".)','good'],
+  [20,'★ The Awakening / Judgement','New purpose, new plans. Good for advocacy, social impact, non-profits. Requires deliberate action to activate.','neutral'],
+  [21,'★ Crown of the Magi','Victory after effort. Advancement and honors. Very favorable for consultancies and professional services.','good'],
+  [22,'★ Illusion & Delusion','Cheiro warns of "living in a fool\'s paradise." Plans built on false premises. Not favored for assertive brands. (Note: v1 incorrectly labeled this "The Submission" — Cheiro\'s actual warning is about self-deception, not yielding.)','bad'],
+  [23,'★ The Royal Star of the Lion','Protection, success, favor from powerful allies. One of the strongest compound numbers.','good'],
+  [24,'★ Love & Gain','Fortune through personal magnetism and attraction. Cheiro links this specifically to gain through romantic and personal connections — the v1 label "partnerships and collaboration" was a sanitized reframe. True meaning: personal charm drives commercial success.','good'],
+  [25,'★ Strength Through Trials','Success earned through experience and hardship. Suits established brands better than new ventures.','neutral'],
+  [26,'★ Alliances Gone Wrong','Gravest warnings for the future. Partnerships and associations that bring ruin. Cheiro is emphatic about avoiding this.','bad'],
+  [27,'★ The Sceptre','Authority, command, creative power. Very favorable for leadership brands. (Note: v1 incorrectly labeled this "The Triple Crown" — Cheiro\'s label is "The Sceptre".)','good'],
+  [28,'Loss Through Trust','Gains followed by loss through misplaced trust and opposition. Cheiro considers this a warning number. (Corrected: v1 marked this "neutral" — it should be "caution/avoid".)','bad'],
+  [29,'★ Uncertainty & Deception','Associated with doubt, misplaced trust, and treachery. Avoid.','bad'],
+  [30,'Solitary Fame','High profile but often isolated energy. Thin classical sourcing — Cheiro gives limited detail on 30.','neutral'],
+  [31,'Self-Reliance','Strong independent brand energy. Similar in nature to 30 but more inwardly directed. Modern label — limited Cheiro sourcing.','neutral'],
+  [32,'★ Royal Star (variant of 23)','Shares protective energy with 23. Favorable for communication and public-facing brands. Cheiro links it to the same archetype.','good'],
+  [33,'Wisdom & Sacrifice','High creative and philosophical energy. Favorable for advisory and consulting brands. Note: this does NOT carry "Master Number" status in Chaldean tradition — Master Numbers (11, 22, 33) are a Pythagorean concept.','good'],
+  [34,'Brilliance Blocked','Talent met with obstacles. Challenging for new ventures. Limited classical sourcing.','bad'],
+  [35,'Moderate Momentum','Steady but not spectacular energy. Limited classical sourcing.','neutral'],
+  [36,'★ Wisdom & Authority','Excellent for academic and thought-leadership brands. Well-sourced in Cheiro.','good'],
+  [37,'★ The Fortune of Friendship','Excellent social fortune; thrives through networking and goodwill.','good'],
+  [38,'Unrecognized Talent','Skill that does not convert to commercial success. Limited classical sourcing.','bad'],
+  [39,'Late Maturation','Long maturation curve. Best for legacy brands willing to wait. Limited classical sourcing.','neutral'],
+  [40,'The Recurring Trap','Circles back without forward progress. Limited classical sourcing.','bad'],
+  [41,'The Pioneer Leader','Original, bold, commanding. Great for first-movers. Thin sourcing but consistent with root 5 (Mercury) energy.','good'],
+  [42,'The Disciplined Achiever','Steady gains through consistent effort. Thin sourcing.','neutral'],
+  [43,'Revolutionary Energy','Upheaval energy — works for deliberate disruption brands only. Thin sourcing.','neutral'],
+  [44,'The Iron Foundation','Excellent for infrastructure and long-term asset businesses. Thin sourcing but consistent with root 8 (Saturn) energy.','good'],
+  [45,'★ The Commander','Excellent for large organizations and franchises. Well-sourced.','good'],
+  [46,'Ambition Realized','Strong ambition with leadership capacity. Thin sourcing.','good'],
+  [47,'Intuitive Leadership','Great for coaching and advisory. Thin sourcing but consistent with root 2 (Moon) energy.','good'],
+  [48,'Structured Power','Effective but bureaucratic. Suits corporate brands. Thin sourcing.','neutral'],
+  [49,'Resolution & Closure','Good for restructuring or rebranding phases. Thin sourcing.','neutral'],
+  [50,'Transcendence','Suited to brands with near-spiritual missions. Thin sourcing.','neutral'],
+  [51,'★ The Warrior','Pioneer disruptor energy. Excellent for tech startups. Related to Mars influence.','good']
+];
+
+/* ═══════════════════════════════════════════════
+   CHALDEAN ROOT — v2 CORRECTED PLANETS
+   Classical (Vedic): Rahu/Ketu for 4/7
+   Modern (Western): Uranus/Neptune for 4/7
+   Both shown for transparency.
+   ═══════════════════════════════════════════════ */
+const CHALD_ROOT=[
+  [1,'Sun','Leadership, ambition, new beginnings','Independence, authority, first-mover brands'],
+  [2,'Moon','Sensitivity, intuition, receptivity','Partnerships, relational businesses'],
+  [3,'Jupiter','Growth, luck, creativity','Abundance, expansion, entertainment'],
+  [4,'Rahu · modern: Uranus','Ambition, disruption, unconventional paths','Sudden change, tech, platform innovation. Classical: shadow planet of worldly ambition.'],
+  [5,'Mercury','Speed, communication, commerce','Adaptability, media, fast-moving markets'],
+  [6,'Venus','Beauty, harmony, luxury','Aesthetics, wellness, hospitality, fashion'],
+  [7,'Ketu · modern: Neptune','Spirituality, detachment, hidden knowledge','Research, consulting, niche expertise. Classical: mystical insight and release from material.'],
+  [8,'Saturn','Discipline, structure, karma','Long-term endurance; carries karmic weight — some practitioners avoid for new ventures']
+];
+
+/* ═══════════════════════════════════════════════
+   LIFE PATH DATA — No changes needed
+   ═══════════════════════════════════════════════ */
+const LP_DATA={1:{name:'The Pioneer',meaning:'Natural leader, self-driven, independent. Entrepreneurship and first-mover ventures where vision defines the brand.',verdict:'Excellent for founders. You thrive when leading.',color:'good'},2:{name:'The Diplomat',meaning:'Collaborative, intuitive, relationship-driven. Partnerships and community-centered businesses align with your energy.',verdict:'Best in collaborative ventures.',color:'neutral'},3:{name:'The Creator',meaning:'Expressive, charismatic, growth-oriented. Marketing, entertainment, and creative industries are your territory.',verdict:'Strong for personal branding and public-facing businesses.',color:'good'},4:{name:'The Builder',meaning:'Disciplined, methodical, reliable. Long-term businesses built on process — construction, finance, systems.',verdict:'Your strength is in building structures others rely on.',color:'neutral'},5:{name:'The Adventurer',meaning:'Versatile, dynamic, freedom-seeking. Media, travel, and platforms requiring constant adaptation suit you.',verdict:'Excellent for fast-moving markets. Avoid rigid routine ventures.',color:'neutral'},6:{name:'The Nurturer',meaning:'Service-oriented, responsible, community-focused. Healthcare, wellness, food, and education align deeply.',verdict:'Natural fit for businesses built around caring for others.',color:'good'},7:{name:'The Seeker',meaning:'Analytical, introspective, mastery-driven. Research, consulting, and niche expertise businesses.',verdict:'Best in thought leadership or specialist domains.',color:'neutral'},8:{name:'The Powerhouse',meaning:'Ambitious, authoritative, materially focused. Finance, real estate, executive services, and luxury brands.',verdict:'Built for wealth-generating ventures.',color:'good'},9:{name:'The Humanitarian',meaning:'Compassionate, idealistic, globally oriented. Education, NGOs, and purpose-driven businesses.',verdict:'Excellent for mission-driven ventures. Balance profit with purpose.',color:'good'},11:{name:'The Visionary (Master)',meaning:'Highly intuitive, inspirational, spiritually attuned. Coaching, healing, creative direction, and vision-based purpose brands.',verdict:'Master Number: amplified creative and spiritual leadership.',color:'good'},22:{name:'The Master Builder',meaning:'Rare and powerful. You can create systems and institutions that outlast you. Infrastructure, global brands, legacy.',verdict:'Master Number: extraordinary manifestation potential.',color:'good'},33:{name:'The Master Teacher',meaning:'The rarest life path. Compassionate wisdom and teaching on a large scale. Purpose over profit is the core principle.',verdict:'Master Number: highest expression of service and wisdom.',color:'good'}};
+
+const PY_DATA={1:{name:'Year of New Beginnings',meaning:'Start of a new 9-year cycle. Highest energy for launching a new business or brand. Plant seeds now.',verdict:'Best possible year to start something new.',launch:'Excellent',color:'good'},2:{name:'Year of Partnerships',meaning:'Collaboration, patience, and relationship-building. Good for alliances and co-ventures. Not ideal for solo launches.',verdict:'Good for partnerships. Avoid aggressive solo moves.',launch:'Good for joint ventures',color:'neutral'},3:{name:'Year of Expression',meaning:'Creative, communicative, expansive. Excellent for branding, marketing, social media, and making your voice heard.',verdict:'Strong for brand visibility and content creation.',launch:'Good for creative launches',color:'good'},4:{name:'Year of Building',meaning:'Hard work, foundations, and systems. Build the backend, team, and processes this year. Not the year for flashy launches.',verdict:'Build the foundation now. Launch in a stronger year.',launch:'Good for planning and building',color:'neutral'},5:{name:'Year of Change',meaning:'Unpredictable and dynamic. Pivots happen. New directions open. Launches this year often require later adjustment.',verdict:'High energy but unstable. Best for pivots, not foundations.',launch:'Risky for new ventures',color:'neutral'},6:{name:'Year of Responsibility',meaning:'Family, community, and service take center stage. Good for community-focused and service-based businesses.',verdict:'Favorable for service-based and community businesses.',launch:'Good for service-oriented launches',color:'good'},7:{name:'Year of Reflection',meaning:'Deeply introspective. Better for research, planning, and refinement than for public launches. Go deep, not wide.',verdict:'Plan this year. Launch next year.',launch:'Not recommended for launches',color:'neutral'},8:{name:'Year of Harvest',meaning:'The power year. Money, recognition, and authority flow. Excellent for expansion, financial focus, and scaling.',verdict:'Excellent for expansion, funding, and authority moves.',launch:'Strong for scaling or major launches',color:'good'},9:{name:'Year of Completion',meaning:'End of a 9-year cycle. Time to close chapters and release what no longer serves. Not a year to start.',verdict:'Complete cycles this year. Year 1 follows — prepare for that.',launch:'Not recommended for new launches',color:'bad'},11:{name:'Year of Illumination (Master)',meaning:'Heightened intuition and creative breakthroughs. Great for visionary and purpose-driven projects.',verdict:'Powerful for inspired, purpose-driven launches.',launch:'Good for visionary launches',color:'good'},22:{name:'Year of Mastery (Master)',meaning:'Rare and extraordinary. What you build this year has lasting, significant potential. Large-scale, legacy-level moves.',verdict:'Exceptional year for ambitious, large-scale ventures.',launch:'Exceptional for landmark launches',color:'good'}};
+
+const DN_DATA={1:{name:'New beginnings',verdict:'Excellent',meaning:'Pioneer energy. Ideal start date for any new venture.',color:'good'},2:{name:'Cooperation',verdict:'Good',meaning:'Favors partnerships and collaborative launches.',color:'neutral'},3:{name:'Expression',verdict:'Good',meaning:'Creative and communicative. Great for brand announcements.',color:'good'},4:{name:'Foundation',verdict:'Good',meaning:'Solid and structural. Good for long-term foundations.',color:'neutral'},5:{name:'Change',verdict:'Caution',meaning:'Dynamic but unstable. Best for pivots, riskier for first launches.',color:'neutral'},6:{name:'Harmony',verdict:'Good',meaning:'Service and community. Favorable for people-centered businesses.',color:'good'},7:{name:'Reflection',verdict:'Caution',meaning:'Introspective energy. Better for planning than announcing.',color:'neutral'},8:{name:'Power',verdict:'Excellent',meaning:'Authority and abundance. One of the strongest launch-date numbers.',color:'good'},9:{name:'Completion',verdict:'Avoid',meaning:'Closing energy. Beginnings launched on 9 often struggle to gain traction.',color:'bad'},11:{name:'Illumination',verdict:'Strong',meaning:'Master Number. High intuition — powerful for vision-led launches.',color:'good'},22:{name:'Master Builder',verdict:'Exceptional',meaning:'Master Number. Exceptional foundation energy for landmark launches.',color:'good'}};
+
+/* ═══════════════════════════════════════════════
+   COMPATIBILITY — v2: KEPT BUT WITH DISCLAIMER
+   This matrix is a modern construct, not classical.
+   Based on planetary friendship/elemental affinity.
+   ═══════════════════════════════════════════════ */
+const COMPAT={'1-1':'strong','1-2':'moderate','1-3':'strong','1-4':'moderate','1-5':'strong','1-6':'moderate','1-7':'moderate','1-8':'strong','1-9':'moderate','2-2':'strong','2-3':'moderate','2-4':'strong','2-5':'weak','2-6':'strong','2-7':'moderate','2-8':'weak','2-9':'strong','3-3':'strong','3-4':'weak','3-5':'strong','3-6':'strong','3-7':'weak','3-8':'moderate','3-9':'strong','4-4':'strong','4-5':'weak','4-6':'moderate','4-7':'strong','4-8':'strong','4-9':'moderate','5-5':'moderate','5-6':'weak','5-7':'moderate','5-8':'moderate','5-9':'moderate','6-6':'strong','6-7':'moderate','6-8':'moderate','6-9':'strong','7-7':'strong','7-8':'moderate','7-9':'moderate','8-8':'strong','8-9':'weak','9-9':'moderate'};
+
+/* ═══════════════════════════════════════════════
+   UTILITY FUNCTIONS
+   ═══════════════════════════════════════════════ */
+function getCompat(a,b){const k=[Math.min(a,b),Math.max(a,b)].join('-');return COMPAT[k]||'moderate';}
+function tc(t){return t==='good'?'var(--good)':t==='bad'?'var(--bad)':'var(--neutral)';}
+function tbadge(t){return t==='good'?'tier-good':t==='bad'?'tier-bad':'tier-neutral';}
+function tlabel(t){return t==='good'?'Favorable':t==='bad'?'Caution':'Context-dependent';}
+
+function reduceM(n,master){if(master&&(n===11||n===22||n===33))return n;while(n>=10){let s=0,t=n;while(t>0){s+=t%10;t=Math.floor(t/10);}n=s;if(master&&(n===11||n===22||n===33))return n;}return n;}
+function reduceD(n){while(n>=10&&n!==11&&n!==22){let s=0,t=n;while(t>0){s+=t%10;t=Math.floor(t/10);}n=s;}return n;}
+
+/* v2 FIX: Component reduction for Life Path / Personal Year */
+function reduceComponent(n){
+  if(n===11||n===22||n===33) return n;
+  while(n>=10){
+    let s=0,t=n;
+    while(t>0){s+=t%10;t=Math.floor(t/10);}
+    n=s;
+    if(n===11||n===22||n===33) return n;
+  }
+  return n;
+}
+
+function calcSys(name,map,master){
+  const ls=name.toUpperCase().replace(/[^A-Z]/g,'').split('');
+  let total=0,bd=[];
+  ls.forEach(l=>{const v=map[l]||0;bd.push({l,v});total+=v;});
+  return{total,root:reduceM(total,master),bd};
+}
+
+function fillDays(id){const s=document.getElementById(id);s.innerHTML='<option value="">DD</option>';for(let i=1;i<=31;i++){const o=document.createElement('option');o.value=i;o.textContent=String(i).padStart(2,'0');s.appendChild(o);}}
+function fillYears(id,start,end,rev){const s=document.getElementById(id);s.innerHTML='<option value="">YYYY</option>';const a=[];for(let y=start;y<=end;y++)a.push(y);(rev?a.reverse():a).forEach(y=>{const o=document.createElement('option');o.value=y;o.textContent=y;s.appendChild(o);});}
+function fillLY(id){const s=document.getElementById(id);const cy=new Date().getFullYear();s.innerHTML='<option value="">YYYY</option>';for(let y=cy-2;y<=cy+5;y++){const o=document.createElement('option');o.value=y;o.textContent=y;s.appendChild(o);}}
+
+function buildPythChart(){const el=document.getElementById('pyth-chart');'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l=>{const d=document.createElement('div');d.className='pyth-cell';d.innerHTML=`<div class="letter">${l}</div><div class="val">${PYTH[l]}</div>`;el.appendChild(d);});}
+function buildChaldChart(){const el=document.getElementById('chald-chart');const g={1:[],2:[],3:[],4:[],5:[],6:[],7:[],8:[]};Object.entries(CHALD).forEach(([l,v])=>g[v].push(l));for(let i=1;i<=8;i++){const d=document.createElement('div');d.className='chald-col';d.innerHTML=`<div class="chald-num">${i}</div><div class="chald-letters">${g[i].join('<br>')}</div>`;el.appendChild(d);}}
+function buildPythMeanings(){const tb=document.getElementById('pyth-meanings');PYTH_DATA.forEach(([n,kw,best,c])=>{const tr=document.createElement('tr');const iM=n===11||n===22||n===33;tr.innerHTML=`<td class="num-col">${n}${iM?'<div style="font-size:9px;font-family:DM Mono,monospace;letter-spacing:.1em;color:var(--gold-dim);margin-top:2px">MASTER</div>':''}</td><td><strong>${kw}</strong></td><td>${best}</td><td style="font-size:12px;color:var(--text-muted)">${c}</td>`;tb.appendChild(tr);});}
+function buildChaldCompound(){const tb=document.getElementById('chald-compound-table');CHALD_COMPOUND.forEach(([n,name,meaning,tier])=>{const tr=document.createElement('tr');tr.innerHTML=`<td class="num-col">${n}<div><span class="tier-badge ${tbadge(tier)}">${tlabel(tier)}</span></div></td><td><strong>${name}</strong></td><td>${meaning}</td>`;tb.appendChild(tr);});}
+function buildChaldRoot(){const tb=document.getElementById('chald-root-table');CHALD_ROOT.forEach(([n,p,kw,e])=>{const tr=document.createElement('tr');tr.innerHTML=`<td class="num-col">${n}</td><td><strong>${p}</strong></td><td>${kw}</td><td>${e}</td>`;tb.appendChild(tr);});}
+function buildDateRef(){const el=document.getElementById('date-num-ref');Object.entries(DN_DATA).forEach(([n,d])=>{const div=document.createElement('div');div.className='ref-cell';div.innerHTML=`<div class="ref-cell-num" style="color:${tc(d.color)}">${n}</div><div class="ref-cell-name">${d.name}</div><div class="ref-cell-verdict" style="color:${tc(d.color)}">${d.verdict}</div>`;el.appendChild(div);});}
+
+let curSys='both';
+function switchTab(sys,btn){curSys=sys;document.querySelectorAll('.sys-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calculate();}
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+
+function renderBlock(label,comp,root,bd,mHtml,tier){
+  return`<div style="background:var(--bg4);border:0.5px solid var(--border-dim);border-radius:var(--radius);padding:1.5rem;flex:1;min-width:260px">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem">${label}</div>
+    <div style="display:flex;gap:1.5rem;align-items:flex-end;margin-bottom:1rem">
+      <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:2px">Compound</div><div style="font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;line-height:1;color:${tc(tier)}">${comp}</div></div>
+      <div style="padding-bottom:8px"><div style="font-size:11px;color:var(--text-muted);margin-bottom:2px">Root</div><div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream)">${root}</div></div>
+    </div>
+    <div style="background:var(--bg3);border-radius:var(--radius);padding:.75rem 1rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);line-height:2;word-break:break-all;margin-bottom:1rem">${bd.map(x=>`${x.l}<span style="color:var(--gold)">(${x.v})</span>`).join(' ')}</div>
+    ${mHtml}</div>`;
+}
+
+function calculate(){
+  const name=document.getElementById('calcInput').value;
+  const out=document.getElementById('calc-output');
+  if(!name.trim()){out.innerHTML='<div class="empty-state"><div class="empty-glyph">∞</div>Type a name above to begin your reading.</div>';return;}
+  const letters=name.toUpperCase().replace(/[^A-Z]/g,'');
+  if(!letters){out.innerHTML='<div class="empty-state">No letters found in input.</div>';return;}
+  let blocks='';
+  if(curSys==='both'||curSys==='pythagorean'){
+    const r=calcSys(name,PYTH,true);
+    const m=PYTH_DATA.find(d=>d[0]===r.root);
+    const iM=r.root===11||r.root===22||r.root===33;
+    const mHtml=m?`<div style="border-left:2px solid var(--gold-dim);padding:1rem 1.25rem;background:rgba(201,168,76,0.04);border-radius:0 var(--radius) var(--radius) 0">${iM?`<div class="tier-badge tier-good" style="margin-bottom:6px">Master Number</div>`:''}<div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--cream);margin-bottom:4px">${m[1]}</div><div style="font-size:12px;color:var(--text-dim);margin-bottom:6px">${m[2]}</div><div style="font-size:11px;color:var(--text-muted)">Caution: ${m[3]}</div></div>`:'<div style="font-size:12px;color:var(--text-muted)">No specific interpretation for this number.</div>';
+    blocks+=renderBlock('Pythagorean',r.total,r.root,r.bd,mHtml,'neutral');
+  }
+  if(curSys==='both'||curSys==='chaldean'){
+    const r=calcSys(name,CHALD,false);
+    const cm=CHALD_COMPOUND.find(d=>d[0]===r.total);
+    const rm=CHALD_ROOT.find(d=>d[0]===r.root);
+    const tier=cm?cm[3]:'neutral';
+    const mHtml=`<div style="border-left:2px solid ${tc(tier)};padding:1rem 1.25rem;background:rgba(201,168,76,0.04);border-radius:0 var(--radius) var(--radius) 0;margin-bottom:.75rem">${cm?`<div class="tier-badge ${tbadge(tier)}" style="margin-bottom:6px">${tlabel(tier)}</div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--cream);margin-bottom:4px">Compound ${r.total}: ${cm[1]}</div><div style="font-size:12px;color:var(--text-dim)">${cm[2]}</div>`:'<div style="font-size:12px;color:var(--text-muted)">No specific compound meaning in Cheiro\'s range (10–52). Refer to root number.</div>'}</div>${rm?`<div style="font-size:12px;color:var(--text-dim);padding:.5rem 0">Root ${r.root} — <strong style="color:var(--cream-dim)">${rm[1]} (${rm[2]})</strong>: ${rm[3]}</div>`:''}`;
+    blocks+=renderBlock('Chaldean',r.total,r.root,r.bd,mHtml,tier);
+  }
+  out.innerHTML=`<div style="display:flex;gap:1rem;flex-wrap:wrap">${blocks}</div>`;
+}
+
+/* ═══════════════════════════════════════════════
+   TIMING CALCULATORS — v2 USES COMPONENT REDUCTION
+   ═══════════════════════════════════════════════ */
+function calcLifePath(){
+  const d=parseInt(document.getElementById('lp-day').value);
+  const m=parseInt(document.getElementById('lp-month').value);
+  const y=parseInt(document.getElementById('lp-year').value);
+  const out=document.getElementById('lp-result');
+  if(!d||!m||!y){out.classList.remove('visible');return;}
+
+  /* v2: Component reduction — reduce day, month, year separately then sum */
+  const dayR = reduceComponent(d);
+  const monR = reduceComponent(m);
+  const yearR = reduceComponent(y);
+  const total = dayR + monR + yearR;
+  const root = reduceM(total, true);
+  const data=LP_DATA[root];
+  const iM=root===11||root===22||root===33;
+  const bd=`Day ${d}→${dayR} + Month ${m}→${monR} + Year ${y}→${yearR} = ${total} → ${root}`;
+
+  out.innerHTML=`<div style="display:flex;align-items:flex-end;gap:1.5rem;margin-bottom:1rem"><div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Life Path Number</div><div class="big-number ${data?data.color:'neutral'}">${root}</div>${iM?`<div class="tier-badge tier-good" style="margin-top:6px">Master Number</div>`:''}</div>${data?`<div style="padding-bottom:12px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);font-weight:400">${data.name}</div></div>`:''}</div><div class="breakdown-mono">${bd}</div>${data?`<div style="border-left:2px solid ${tc(data.color)};padding:1rem 1.25rem;background:rgba(201,168,76,0.04);border-radius:0 var(--radius) var(--radius) 0;margin-top:1rem"><div style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:8px">${data.meaning}</div><div style="font-size:12px;font-weight:500;color:${tc(data.color)}">${data.verdict}</div></div>`:''}`;
+  out.classList.add('visible');
+}
+
+const CY=new Date().getFullYear();
+document.getElementById('cy-display').textContent=CY;
+
+function calcPersonalYear(){
+  const d=parseInt(document.getElementById('py-day').value);
+  const m=parseInt(document.getElementById('py-month').value);
+  const out=document.getElementById('py-result');
+  if(!d||!m){out.classList.remove('visible');return;}
+
+  /* v2: Component reduction */
+  const dayR = reduceComponent(d);
+  const monR = reduceComponent(m);
+  const yearR = reduceComponent(CY);
+  const total = dayR + monR + yearR;
+  const root = reduceM(total, true);
+  const data=PY_DATA[root]||PY_DATA[reduceM(root,false)];
+  const bd=`Day ${d}→${dayR} + Month ${m}→${monR} + Year ${CY}→${yearR} = ${total} → ${root}`;
+
+  out.innerHTML=`<div style="display:flex;align-items:flex-end;gap:1.5rem;margin-bottom:1rem"><div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Personal Year ${CY}</div><div class="big-number ${data?data.color:'neutral'}">${root}</div></div>${data?`<div style="padding-bottom:12px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);font-weight:400">${data.name}</div></div>`:''}</div><div class="breakdown-mono">${bd}</div>${data?`<div style="border-left:2px solid ${tc(data.color)};padding:1rem 1.25rem;background:rgba(201,168,76,0.04);border-radius:0 var(--radius) var(--radius) 0;margin-top:1rem"><div style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:8px">${data.meaning}</div><div style="font-size:12px;font-weight:500;color:${tc(data.color)};margin-bottom:4px">${data.verdict}</div><div style="font-size:12px;color:var(--text-muted)">Launch energy: <span style="color:${tc(data.color)}">${data.launch}</span></div></div>`:''}`;
+  out.classList.add('visible');
+}
+
+function calcLaunch(){
+  const d=parseInt(document.getElementById('ld-day').value);
+  const m=parseInt(document.getElementById('ld-month').value);
+  const y=parseInt(document.getElementById('ld-year').value);
+  const out=document.getElementById('ld-result');
+  if(!d||!m||!y){out.classList.remove('visible');return;}
+  const digits=(String(d)+String(m)+String(y)).split('').map(Number);
+  const total=digits.reduce((a,b)=>a+b,0);
+  const root=reduceD(total);
+  const data=DN_DATA[root]||DN_DATA[reduceM(root,false)];
+  const iM=root===11||root===22;
+  const bd=`${String(d).split('').join('+')} + ${String(m).split('').join('+')} + ${String(y).split('').join('+')} = ${total} → ${root}`;
+  out.innerHTML=`<div style="display:flex;align-items:flex-end;gap:1.5rem;margin-bottom:1rem"><div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Date Number</div><div class="big-number ${data?data.color:'neutral'}">${root}</div>${iM?`<div class="tier-badge tier-good" style="margin-top:6px">Master Number</div>`:''}</div>${data?`<div style="padding-bottom:12px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);font-weight:400">${data.name}</div></div>`:''}</div><div class="breakdown-mono">${bd}</div>${data?`<div style="border-left:2px solid ${tc(data.color)};padding:1rem 1.25rem;background:rgba(201,168,76,0.04);border-radius:0 var(--radius) var(--radius) 0;margin-top:1rem"><div style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:8px">${data.meaning}</div><div style="font-size:12px;font-weight:500;color:${tc(data.color)}">Launch verdict: ${data.verdict}</div></div>`:''}`;
+  out.classList.add('visible');
+}
+
+function calcAlignment(){
+  const name=document.getElementById('align-name').value;
+  const d=parseInt(document.getElementById('al-day').value);
+  const m=parseInt(document.getElementById('al-month').value);
+  const y=parseInt(document.getElementById('al-year').value);
+  const out=document.getElementById('al-result');
+  if(!name.trim()||!d||!m||!y){out.classList.remove('visible');return;}
+  const letters=name.toUpperCase().replace(/[^A-Z]/g,'');
+  if(!letters){out.classList.remove('visible');return;}
+  const nr=calcSys(name,CHALD,false);
+  const nameRoot=nr.root;
+  const digits=(String(d)+String(m)+String(y)).split('').map(Number);
+  const dateRoot=reduceD(digits.reduce((a,b)=>a+b,0));
+  const compat=getCompat(nameRoot,dateRoot);
+  const CM={strong:{label:'Sympathetic Numbers',color:'good',pct:85,body:'These numbers share elemental affinity based on planetary friendship principles. This is a modern interpretive framework — not a classical guarantee. The name and date energies are considered naturally sympathetic.'},moderate:{label:'Neutral Pairing',color:'neutral',pct:50,body:'Neither strongly sympathetic nor antagonistic. Most number pairings fall here. The launch can succeed on its own merits — this pairing neither helps nor hinders from a numerological perspective.'},weak:{label:'Friction Pairing',color:'bad',pct:20,body:'These numbers are associated with different elemental energies. This does not mean failure — it suggests the name and date serve different purposes. Consider this one data point among many, not a veto.'}};
+  const c=CM[compat];
+  out.innerHTML=`<div class="align-grid"><div class="align-block"><div class="align-label">Name Root (Chaldean)</div><div class="align-num">${nameRoot}</div><div style="font-size:11px;color:var(--text-muted);margin-top:4px">${name.trim()}</div></div><div class="align-block"><div class="align-label">Date Root</div><div class="align-num">${dateRoot}</div><div style="font-size:11px;color:var(--text-muted);margin-top:4px">${String(d).padStart(2,'0')}/${String(m).padStart(2,'0')}/${y}</div></div></div><div class="align-compat-bar"><div class="align-compat-fill" style="width:${c.pct}%;background:${tc(c.color)}"></div></div><div class="align-verdict" style="background:rgba(0,0,0,0.15);border:0.5px solid ${tc(c.color)}44;text-align:center"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:${tc(c.color)};margin-bottom:6px">${c.label}</div><div style="font-size:13px;color:var(--text-dim);line-height:1.75">${c.body}</div></div>`;
+  out.classList.add('visible');
+}
+
+function switchTool(tool,btn){
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tool-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tool-'+tool).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('nav-naming').style.display=tool==='naming'?'flex':'none';
+  document.getElementById('nav-timing').style.display=tool==='timing'?'flex':'none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+fillDays('lp-day');fillDays('py-day');fillDays('ld-day');fillDays('al-day');
+fillYears('lp-year',1930,2010,true);
+fillLY('ld-year');fillLY('al-year');
+buildPythChart();buildChaldChart();buildPythMeanings();buildChaldCompound();buildChaldRoot();buildDateRef();
+</script>
+</body>
+</html>
