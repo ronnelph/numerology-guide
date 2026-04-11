@@ -1,9 +1,8 @@
-[README.md](https://github.com/user-attachments/files/26608718/README.md)
 # Chaldean Numerology Guide for Business & Branding
 
 A practical, decision-focused guide to using Chaldean (and Pythagorean) Numerology for business naming, brand positioning, and launch timing.
 
-**[→ Open the Guide](https://ronnelestrada.com/numerology-guide)**
+**[→ Open the Guide](https://numerology.ronnelestrada.com)**
 
 ---
 
@@ -53,6 +52,14 @@ If this guide helped you make a better decision or saved you research time:
 
 **PayPal** — ronphierce@gmail.com
 **GCash** — 0956 651 0333
+
+## Work With Me
+
+Custom name audits, branding strategy, solar energy consulting, or real estate consultation:
+
+- **Facebook:** [@EvBroPh](https://www.facebook.com/evbroph)
+- **Email:** ronphierce@gmail.com
+- **Web:** [ronnelestrada.com](https://ronnelestrada.com)
 
 ## Disclaimer
 
